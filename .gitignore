@@ -1,0 +1,8 @@
+/BlackLabelCore/[Bb]in/
+/BlackLabelCore/[Dd]ebug/
+/BlackLabelCore/[Oo]bj/
+/release/
+/.vs/
+**.user
+blacklabelassets
+*.zip
