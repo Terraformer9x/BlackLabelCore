@@ -1,9 +1,0 @@
-{
-    "name": "BlackLabel_Core",
-    "version_number": "1.0.0",
-	"website_url": "https://github.com/Terraformer9x/BlackLabelCore",
-    "description": "Core plugin for the Black Label modpack.",
-    "dependencies": [
-		"BepInEx-BepInExPack-5.4.2100"
-	]
-}

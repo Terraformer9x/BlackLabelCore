@@ -82,4 +82,6 @@ internal static class Compatibility
     internal static bool LethalLevelLoader = Chainloader.PluginInfos.ContainsKey("imabatby.lethallevelloader");
     internal static bool Chameleon = Chainloader.PluginInfos.ContainsKey("butterystancakes.lethalcompany.chameleon");
     internal static bool TonightWeDine = Chainloader.PluginInfos.ContainsKey("TonightWeDine");
+    internal static bool ManeaterDamagePatch = Chainloader.PluginInfos.ContainsKey("com.github.WhiteSpike.ManeaterDamagePatch");
+    internal static bool JesterDoorSlam = Chainloader.PluginInfos.ContainsKey("JesterDoorSlam");
 }
