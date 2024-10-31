@@ -27,7 +27,6 @@ public class ArtificeBlackLabelLevel() : BlackLabelLevel("ArtificeLevel")
             new() { spawnableItem = GlobalInfo.items["Boot"], rarity = 1 }
         ]);
 
-
         level.enemySpawnChanceThroughoutDay = new AnimationCurve
         (
             new()
@@ -75,6 +74,7 @@ public class ArtificeBlackLabelLevel() : BlackLabelLevel("ArtificeLevel")
             preWrapMode = WrapMode.Loop,
             postWrapMode = WrapMode.Loop
         };
+        level.Enemies.Find(x => x.enemyType.name == "CaveDweller").rarity = 25;
 
         level.dungeonFlowTypes.First(x => x.id == GlobalInfo.dungeonIDs["Level2Flow"]).rarity = 300;
         level.dungeonFlowTypes.First(x => x.id == GlobalInfo.dungeonIDs["Level1Flow"]).rarity = 50;

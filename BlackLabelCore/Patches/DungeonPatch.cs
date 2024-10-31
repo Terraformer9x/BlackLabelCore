@@ -83,7 +83,7 @@ internal class DungeonPatch
     {
         switch (__instance.DungeonFlow.name)
         {
-            case "Leve3Flow": Level3Patch(); break; 
+            case "Level3Flow": Level3Patch(); break; 
         }
 
         void Level3Patch() {
