@@ -33,7 +33,7 @@ internal class RoundManagerPatch
 
     [HarmonyPatch("RefreshEnemiesList")]
     [HarmonyPostfix]
-    private static void PreventEnemyRushPatch(RoundManager __instance)
+    private static void PreventAnomaliesPatch(RoundManager __instance)
     {
         if((int)typeof(RoundManager).GetField("enemyRushIndex", BindingFlags.Instance | BindingFlags.NonPublic).GetValue(__instance) >= 0 && !StartOfRound.Instance.isChallengeFile)
         {
@@ -41,5 +41,6 @@ internal class RoundManagerPatch
             __instance.currentMaxInsidePower = (float)__instance.currentLevel.maxEnemyPowerCount;
             Plugin.LogDebug("Prevented an enemy rush, enemy power is reset back to " + __instance.currentMaxInsidePower);
         }
+        __instance.indoorFog.gameObject.SetActive(false);
     }
 }

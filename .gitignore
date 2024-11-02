@@ -2,6 +2,7 @@
 /BlackLabelCore/[Dd]ebug/
 /BlackLabelCore/[Oo]bj/
 /release/
+/release2/
 /.vs/
 **.user
 blacklabelassets

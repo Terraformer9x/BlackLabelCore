@@ -13,7 +13,7 @@ public class Plugin : BaseUnityPlugin
 {
     private const string pluginGUID = "terraformer9x.BlackLabelCore";
     private const string pluginName = "Black Label Core";
-    private const string pluginVersion = "1.0.0";
+    private const string pluginVersion = "1.2.0";
     public const int pluginVersionNum = 1;
 
     private readonly Harmony harmony = new(pluginGUID);
