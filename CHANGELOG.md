@@ -2,7 +2,6 @@
 
 # Version 1.2.0
 - Change the interior fog event density from 5 to 10.
-- Cleaned up unused references.
 
 # Version 1.1.0
 - Added Jester slamming open doors.
