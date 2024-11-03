@@ -1,8 +1,4 @@
-﻿using BepInEx;
-using BepInEx.Bootstrap;
-using HarmonyLib;
-using System.IO;
-using System.Reflection;
+﻿using HarmonyLib;
 using Unity.AI.Navigation;
 using UnityEngine;
 using UnityEngine.SceneManagement;

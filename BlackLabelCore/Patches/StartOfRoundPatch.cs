@@ -1,13 +1,8 @@
 ﻿using BlackLabelCore.Levels;
 using DunGen.Graph;
 using HarmonyLib;
-using System;
-using System.Collections.Generic;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.Audio;
 
 namespace BlackLabelCore.Patches;
 
@@ -17,15 +12,17 @@ internal class StartOfRoundPatch
     private static bool executed = false;
     public static RoundManager RoundManager { get; internal set; }
     public static StartOfRound StartOfRound { get; internal set; }
+    public static SoundManager SoundManager { get; internal set; }
 
     [HarmonyPatch("Awake")]
     [HarmonyPrefix]
-    private static void Execute(StartOfRound __instance)
+    private static void Execute()
     {
         if (executed) return;
 
         RoundManager = GameObject.FindFirstObjectByType<RoundManager>();
         StartOfRound = GameObject.FindFirstObjectByType<StartOfRound>();
+        SoundManager = GameObject.FindFirstObjectByType<SoundManager>();
 
         SetupGlobalInfo();
         SetupItems();

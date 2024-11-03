@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace BlackLabelCore.Levels;
+﻿namespace BlackLabelCore.Levels;
 
 public class EmbrionBlackLabelLevel() : BlackLabelLevel("EmbrionLevel")
 {

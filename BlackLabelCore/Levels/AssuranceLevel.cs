@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace BlackLabelCore.Levels;
 
 public class AssuranceBlackLabelLevel() : BlackLabelLevel("AssuranceLevel")

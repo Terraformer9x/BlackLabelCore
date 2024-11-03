@@ -1,7 +1,4 @@
-﻿using MonoMod.Utils;
-using System.Collections.Generic;
-
-namespace BlackLabelCore.Levels;
+﻿namespace BlackLabelCore.Levels;
 
 public class ExperimentationBlackLabelLevel() : BlackLabelLevel("ExperimentationLevel")
 {

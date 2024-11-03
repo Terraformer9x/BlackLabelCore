@@ -1,3 +1,5 @@
+## WARNING: This plugin is built to do very specific things and is very prone to breaking if it comes into conflict with the wrong mods, use with caution!
+
 # Black Label Core
 The core plugin for the Black Label modpack, not intended to be used outside of it.
 

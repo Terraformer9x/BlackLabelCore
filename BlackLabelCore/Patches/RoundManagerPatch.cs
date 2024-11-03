@@ -1,11 +1,8 @@
-﻿using BlackLabelCore.Levels;
-using HarmonyLib;
-using System;
+﻿using HarmonyLib;
 using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
-using UnityEngine.Rendering.VirtualTexturing;
+using System;
 
 namespace BlackLabelCore.Patches;
 
@@ -33,7 +30,7 @@ internal class RoundManagerPatch
 
     [HarmonyPatch("RefreshEnemiesList")]
     [HarmonyPostfix]
-    private static void PreventAnomaliesPatch(RoundManager __instance)
+    private static void NerfAnomaliesPatch(RoundManager __instance)
     {
         if((int)typeof(RoundManager).GetField("enemyRushIndex", BindingFlags.Instance | BindingFlags.NonPublic).GetValue(__instance) >= 0 && !StartOfRound.Instance.isChallengeFile)
         {
@@ -41,6 +38,9 @@ internal class RoundManagerPatch
             __instance.currentMaxInsidePower = (float)__instance.currentLevel.maxEnemyPowerCount;
             Plugin.LogDebug("Prevented an enemy rush, enemy power is reset back to " + __instance.currentMaxInsidePower);
         }
-        __instance.indoorFog.gameObject.SetActive(false);
+
+        Random random = new(StartOfRound.Instance.randomMapSeed + 5781);
+        __instance.indoorFog.gameObject.SetActive(random.Next(0, 150) < 3);
+        __instance.indoorFog.parameters.meanFreePath = 10f;
     }
 }
